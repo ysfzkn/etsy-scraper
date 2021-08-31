@@ -4,6 +4,7 @@
 
 # Run
 * To run you can execute commands given below.
+* `git clone https://github.com/ysfzkn/etsy-scraper.git`
 * `npm install -y`
 * `npm start`
 * After run this commands go to www.localhost:3000/home from browser
