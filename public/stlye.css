@@ -1,0 +1,19 @@
+a{
+    color:white;
+}
+
+#header{
+    font-size: 25px;
+}
+
+#loading{
+    display:none;
+}
+
+tbody {
+    counter-reset: row;
+  }
+  tbody tr::before {
+    counter-increment: row;
+    content: counter(row) "";
+  }
