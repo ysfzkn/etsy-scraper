@@ -58,9 +58,7 @@ def get_image(response): # ilandaki arabanın özelliklerini çeker
         imgs = soup.find_all("img", src=True) 
         # print(divs)
         for img in imgs:
-            
-            #srcs = div.find_all_next("src")
-            #for src in srcs:
+           
             try: 
                 index = img["data-index"]
                 # print(index)

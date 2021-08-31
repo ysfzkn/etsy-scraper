@@ -1,20 +1,18 @@
 
-
-// const button = document.querySelector("#button");
 var loadImage = document.querySelector('#loading');
 
 document.querySelector('#getads').addEventListener('click',loadads);
 
 let prices = []
 
-function loadads()   // eski versiyon request işlemi
+function loadads()   
 {
 
-    console.log("fonksiyon çalışıyor")
+    console.log("fetch working")
 
     loadImage.style.display = 'block';
 
-    var url = document.getElementById("product").value; 
+    var url = document.getElementById("produc").value; 
         
     var encoded = encodeURIComponent(url);
 
@@ -50,11 +48,9 @@ function loadads()   // eski versiyon request işlemi
                                     <td id="color">${ad.price}</td>
                                 </tr>`;
                     });             
-                                  
-                //document.getElementById('#ads').append(html);
+            
                 $('tbody').append(html);
-                //document.querySelector('#ads').innerHTML = html;
-    
+
             }
         }
         xhr.send();

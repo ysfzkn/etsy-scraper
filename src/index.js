@@ -5,15 +5,11 @@ const port = 3000
 const child = require("child_process")
 const path = require("path")
 const util = require("util")
-// const axios = require("axios")
-// const bodyParser = require("body-parser")
 const mongoose = require('mongoose')
 const router = express.Router()
 const Product = require('./models/product')
 const DATABASE_URL = 'mongodb+srv://test_user:testpassword@cluster0.pewah.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' ;
 
-
-// app.use(bodyParser.urlencoded({ extended: true }));
 
 async function insert_data(data,req,res)
 {
@@ -21,8 +17,6 @@ async function insert_data(data,req,res)
   const db = mongoose.connection
   db.on('error', (error) => console.error(error))
   db.once('open', () => console.log('Connected to Database'))
-
-  //console.log(data.name)
 
   const product = new Product(
   {
@@ -61,7 +55,6 @@ app.get('/etsy/:url' , async (req, res) =>
     }
     
     const awat = await JSON.parse(stdout); 
-    //awat = await JSON.parse(awat);
     let obj = JSON.parse(awat) ;
     let item = obj[0];
     insert_data(item);
