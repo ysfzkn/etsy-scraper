@@ -46,7 +46,7 @@ def get_name(response):
         print(e)
         name.append("")
     
-def get_image(response): # ilandaki arabanın özelliklerini çeker
+def get_image(response): 
 
     global image
     
